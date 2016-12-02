@@ -1,5 +1,5 @@
 import 'string.prototype.startswith';
-import './index.ts';
+import './index';
 import 'angular-mocks';
 
 requireAll((<any>require).context('../tests/', true, /spec.js$/));
