@@ -2,8 +2,8 @@ module.exports = function (wallaby) {
     var wallabyWebpack = require('wallaby-webpack');
     var webpackConfig = require('./webpack.conf.js');
     webpackConfig.module.loaders.shift();
-    webpackConfig.module.resolve.root = wallaby.projectCacheDir;
-    webpackConfig.module.resolve.extensions = ['', '.js'];
+    webpackConfig.resolve.root = wallaby.projectCacheDir;
+    webpackConfig.resolve.extensions = ['', '.js'];
     webpackConfig.entryPatterns = [
         'packages/**/test.js',
         'packages/**/tests/unit/**/*.spec.js'];

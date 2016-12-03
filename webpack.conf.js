@@ -1,9 +1,9 @@
 module.exports = {
-    module: {
-        resolve: {
-            root: __dirname,
+    resolve: {
+        root: __dirname,
             extensions: ['', '.js', '.ts']
         },
+    module: {
         resolveLoader: {
             modulesDirectories: ['node_modules']
         },
