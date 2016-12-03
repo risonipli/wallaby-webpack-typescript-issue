@@ -1,5 +1,5 @@
 import * as angular from 'angular';
-import { IDecoratedQService } from '../../../src/decorators/EarlyExitDecoratorConfig.ts';
+import { IDecoratedQService } from '../../../src/decorators/EarlyExitDecoratorConfig';
 
 describe('factory: EarlyExit -', () => {
     let $q: IDecoratedQService;

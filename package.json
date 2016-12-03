@@ -4,7 +4,8 @@
   "description": "",
   "author": "",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "sh postinstall.sh"
   },
   "dependencies": {
     "@types/angular": "1.5.19",
