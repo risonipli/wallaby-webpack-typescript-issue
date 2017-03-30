@@ -2,21 +2,23 @@ var wallabyWebpack = require('wallaby-webpack');
 var webpackConfig = require('./webpack.conf.js');
 webpackConfig.entryPatterns = ['packages.test.js'];
 
-var webpackPostprocessor = wallabyWebpack(webpackConfig);
+var webpackPostprocessor = wallabyWebpack({
+    entryPatterns: [
+        'src/**/*.spec.js'
+    ]
+});
 
 module.exports = function () {
     return {
         files: [
-            {pattern: 'packages/**/src/**/*.html', load: false},
-            {pattern: 'packages/**/src/**/*.css', load: false},
-            {pattern: 'packages/**/src/**/*.js', load: false},
-            {pattern: 'packages/**/src/**/*.ts', load: false},
-            {pattern: 'packages.test.ts', load: false}
+            {pattern: 'src/**/*.js', load: false},
+            {pattern: 'src/**/*.ts', load: false},
+
+            {pattern: 'src/**/*.spec.ts', ignore: true},
         ],
 
         tests: [
-            {pattern: 'packages/**/tests/unit/**/*.spec.ts', load: false},
-            {pattern: 'packages/**/tests/unit/**/*.spec.js', load: false}
+            {pattern: 'src/**/*.spec.ts', load: false},
         ],
 
         testFramework: 'jasmine',
