@@ -4,6 +4,7 @@
   "description": "",
   "author": "",
   "scripts": {
+    "test": "grunt test",
     "postinstall": "sh postinstall.sh"
   },
   "dependencies": {},
