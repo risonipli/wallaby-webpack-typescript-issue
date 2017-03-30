@@ -12,10 +12,10 @@ module.exports = function () {
         files: [
             { pattern: 'src/**/*.js', load: false },
             { pattern: 'src/**/*.ts', load: false },
-            // { pattern: 'node_modules/utils/package.json', load: false },
-            // { pattern: 'node_modules/utils_user/package.json', load: false },
-            // { pattern: 'node_modules/utils/**/*.ts', load: false },
-            // { pattern: 'node_modules/utils_user/**/*.ts', load: false },
+            { pattern: 'node_modules/utils/package.json', load: false },
+            { pattern: 'node_modules/utils_user/package.json', load: false },
+            { pattern: 'node_modules/utils/**/*.ts', load: false },
+            { pattern: 'node_modules/utils_user/**/*.ts', load: false },
 
             { pattern: 'src/**/*.spec.ts', ignore: true }
         ],
