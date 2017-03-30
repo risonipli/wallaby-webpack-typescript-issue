@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "author": "",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "sh postinstall.sh"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "2.5.45",
