@@ -1,12 +1,12 @@
+var path = require('path');
 var wallabyWebpack = require('wallaby-webpack');
 
-var webpackPostprocessor = wallabyWebpack({
-    entryPatterns: [
-        'src/**/*.spec.js'
-    ]
-});
-
-module.exports = function () {
+module.exports = function (wallaby) {
+    var webpackPostprocessor = wallabyWebpack({
+        resolve: {
+          modules: [path.join(wallaby.projectCacheDir, 'node_modules'), 'node_modules']
+        }
+    });
     return {
         debug: true,
         files: [
